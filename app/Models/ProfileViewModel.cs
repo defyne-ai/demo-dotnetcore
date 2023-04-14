@@ -11,7 +11,7 @@ namespace Verademo.Models
         public string RealName { get; set; }
         public string Image { get; set; }
         public string BlabName { get; set; }
-
+        public string Weather { get; set; }
         public bool IsAdmin { get; set; }
     }
 }

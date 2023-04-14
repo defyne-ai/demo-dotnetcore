@@ -18,6 +18,10 @@ using Microsoft.AspNetCore.Hosting;
 using Verademo.Models;
 using Verademo.Data;
 using System.IO.Pipes;
+using SmhiWeather;
+using app.Commands;
+using System.Data;
+using Verademo.Commands;
 
 namespace Verademo.Controllers
 {
@@ -166,6 +170,14 @@ namespace Verademo.Controllers
                 PopulateProfileViewModel(connection, username, viewModel);
             }
 
+
+            /* START BAD CODE */
+            // using self implementation while there is already a use of a nuget lib
+            logger.Info("calling Weather service directly");
+            viewModel.Weather = GetWeatherSelfImplCommand.Execute(60.68m, 17.14m);
+            /* END BAD CODE */
+
+
             return View(viewModel);
         }
 
@@ -271,6 +283,14 @@ namespace Verademo.Controllers
                 return Content("No username provided, please type in your username first");
             }
 
+            // Initialize an SMHI object for Stockholm
+            Smhi smhi = new Smhi(60.68m, 17.14m);
+
+            var currentWeather = smhi.GetCurrentWeather();
+
+            // TODO: present weather info
+            logger.Info("weather info in Stockholm: " + currentWeather);
+
             try
             {
                 using (var dbContext = new ApplicationDbContext())
@@ -283,7 +303,7 @@ namespace Verademo.Controllers
 
                     if (match.PasswordHint == null)
                     {
-                        return Content("Username '" + userName + "' has no password hint!");
+                        return Content("Username '" + userName + "' has no password hint! But hey - here is the weather in Stockholm:" + currentWeather);
                     }
 
                     var formatString = "Username '" + userName + "' has password: {0}";

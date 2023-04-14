@@ -76,7 +76,7 @@
 
             var oReq = new XMLHttpRequest();
             oReq.addEventListener("load", alerter);
-            oReq.open("GET", "passwordhint?username=" + document.forms[0].UserName.value);
+            oReq.open("GET", "Account/passwordhint?username=" + document.forms[0].UserName.value);
             oReq.send();
         }
     </script>
