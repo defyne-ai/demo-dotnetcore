@@ -1,5 +1,13 @@
 # VeraDemo.NET - Blab-a-Gag
 
+## validated as working by Dvir:
+* CWE-73
+* CWE-89
+* CWE-259
+* CWE-327
+* CWE-601
+
+
 ## About
 
 Blab-a-Gag is a fairly simple forum type application which allows:
