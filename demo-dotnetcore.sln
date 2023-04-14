@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "app", "app\app.csproj", "{095CF77F-B592-4210-91A9-426C942CCC21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C4A83D9-A657-4653-A633-B7E94D20DDC3}"
+	ProjectSection(SolutionItems) = preProject
+		db\attach.sql = db\attach.sql
+		db\configure.sh = db\configure.sh
+		Dockerfile = Dockerfile
+		entrypoint.sh = entrypoint.sh
+		LICENSE = LICENSE
+		README.md = README.md
+		db\Verademo.mdf = db\Verademo.mdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{445CAB1A-8FDD-4105-A7AC-12FB46B5E0E3}"
+	ProjectSection(SolutionItems) = preProject
+		db\attach.sql = db\attach.sql
+		db\configure.sh = db\configure.sh
+		db\Verademo.mdf = db\Verademo.mdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{557B6329-DB46-43D7-9501-888E4E7070DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "flaws", "flaws", "{50169BF1-9B3A-4751-AF97-245A767DA25C}"
+	ProjectSection(SolutionItems) = preProject
+		docs\flaws\cwe-100-technology-specific-input-validation-problems.md = docs\flaws\cwe-100-technology-specific-input-validation-problems.md
+		docs\flaws\cwe-117-improper-output-neutralization-for-logs.md = docs\flaws\cwe-117-improper-output-neutralization-for-logs.md
+		docs\flaws\cwe-200-information-exposure.md = docs\flaws\cwe-200-information-exposure.md
+		docs\flaws\cwe-259-hardcoded-password.md = docs\flaws\cwe-259-hardcoded-password.md
+		docs\flaws\cwe-327-broken-crypto.md = docs\flaws\cwe-327-broken-crypto.md
+		docs\flaws\cwe-384-session-fixation.md = docs\flaws\cwe-384-session-fixation.md
+		docs\flaws\cwe-470-unsafe-reflection.md = docs\flaws\cwe-470-unsafe-reflection.md
+		docs\flaws\cwe-502-deserialization-of-untrusted-data.md = docs\flaws\cwe-502-deserialization-of-untrusted-data.md
+		docs\flaws\cwe-601-open-redirect.md = docs\flaws\cwe-601-open-redirect.md
+		docs\flaws\cwe-73-directory-traversal.md = docs\flaws\cwe-73-directory-traversal.md
+		docs\flaws\cwe-78-command-injection.md = docs\flaws\cwe-78-command-injection.md
+		docs\flaws\cwe-80-basic-xss 1.md = docs\flaws\cwe-80-basic-xss 1.md
+		docs\flaws\cwe-89-sql-injection (2nd Order).md = docs\flaws\cwe-89-sql-injection (2nd Order).md
+		docs\flaws\cwe-89-sql-injection.md = docs\flaws\cwe-89-sql-injection.md
+		docs\flaws\cwe-915-improperly-controlled-modification-of-dynamically-determined-object-attributes.md = docs\flaws\cwe-915-improperly-controlled-modification-of-dynamically-determined-object-attributes.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{6716104D-3D44-43ED-BE60-E117482B9B7B}"
+	ProjectSection(SolutionItems) = preProject
+		docs\artifacts\cwe-73-payload.html = docs\artifacts\cwe-73-payload.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Debug|x86.Build.0 = Debug|Any CPU
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Release|x86.ActiveCfg = Release|Any CPU
+		{095CF77F-B592-4210-91A9-426C942CCC21}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50169BF1-9B3A-4751-AF97-245A767DA25C} = {557B6329-DB46-43D7-9501-888E4E7070DA}
+		{6716104D-3D44-43ED-BE60-E117482B9B7B} = {557B6329-DB46-43D7-9501-888E4E7070DA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26EFB042-70F1-4D58-AF6E-B0A258711527}
+	EndGlobalSection
+EndGlobal
