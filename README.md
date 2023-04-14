@@ -7,6 +7,26 @@
 * CWE-327
 * CWE-601
 
+# Use cases tracking
+
+Usecases [Full info](https://docs.google.com/spreadsheets/d/1VHF0Djvu3PbJFywhcWrV0SX1lq6w_bZJCLMbbx5tAwM/edit#gid=1056135309):
+
+- [ ] Authentication
+	- [x] [No authentication at all - invalid](`..\..\app\Controllers\AccountController.cs#185`) [AllowAnonymousTag -> execution]
+	- [x] [No authentication at all - valid](`..\..\app\app\Controllers\AccountController.cs#277`) [AllowAnonymousTag -> execution]
+	- [x] [Valid Authentication](`..\..\app\Controllers\BlabController.cs#72`) [Auth -> validation -> execution]
+	- [x] [Authentication but no validation](`..\..\app\Controllers\BlabController.cs#83`) [Auth -> execution]
+- [ ] Authorization
+- [ ] Cloud-service usage (3rd party API usage)
+	- [ ] exposing PII info to external service
+	- [x] nuget VS plain integration  
+		- [plain](`..\..\app\app\Controllers\AccountController.cs#177`) [ThirdPartyCallTag])
+		- [nuget lib](`..\..\app\app\Controllers\AccountController.cs#289`) [ThirdPartyCallTag])
+	- [ ] expose port binding for debug without prod protection
+- [ ] Crypto-usage
+- [ ] Database usage
+- [ ] Sensitive Data
+- [ ] Frameworks Usage
 
 ## About
 
