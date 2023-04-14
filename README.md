@@ -54,4 +54,8 @@ To run sql container for local development run this:
  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=SuperSecurePassw0rd!" -p 1433:1433 --name sql1 --hostname sql1 -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
+Then:
+1. connect to the db and run - `Resources/scripts/blab_schema.sql` to create the tables. 
+1. initialise data from `/Reset/Reset` page
+
 You will then need to manually run the two commands within `/entrypoint.sh`. The first starts the DB in the background whereas the second compiles and runs the application. Typically a container shouldn't have multiple services but this was done for convenience.
