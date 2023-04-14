@@ -90,7 +90,7 @@ namespace Verademo.Controllers
             try
             {
                 // START BAD CODE
-                var fileName = "/bin/bash";
+                var fileName = "bash";
                 var arguments = $"-c \"/bin/fortune {fortuneFile}\"";
                 // END BAD CODE
 

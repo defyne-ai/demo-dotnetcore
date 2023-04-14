@@ -11,7 +11,7 @@ Exploit 1 - Stealing files
 1. Go to `/profile` as a logged in user
 2. Copy the URL of the "Download Profile Image" link
 3. Paste the URL into the browser URL bar
-4. Change the value of the `image` parameter to: `..\web.config`
+4. Change the value of the `image` parameter to: `..\..\log4net.config`
 5. Observe that the web.config configuration file is downloaded
 
 Exploit 2 - Upload Files

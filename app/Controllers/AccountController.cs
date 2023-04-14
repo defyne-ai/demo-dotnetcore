@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Verademo.Models;
 using Verademo.Data;
+using System.IO.Pipes;
 
 namespace Verademo.Controllers
 {
@@ -225,7 +226,7 @@ namespace Verademo.Controllers
             if (file != null &&  file.Length > 0) 
             {
                 // Get old image name, if any, to delete
-                var oldImage = imageDir + userName + ".png";
+                var oldImage = imageDir + oldUsername + ".png";
                 
                 if (System.IO.File.Exists(oldImage))
                 {
@@ -239,7 +240,10 @@ namespace Verademo.Controllers
                 logger.Info("Saving new profile image: " + newFilename);
 
                 //@AF:TODO
-                //file.SaveAs(newFilename);
+                using (Stream fileStream = new FileStream(newFilename, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
             }
 
             Response.StatusCode = (int)HttpStatusCode.OK;
