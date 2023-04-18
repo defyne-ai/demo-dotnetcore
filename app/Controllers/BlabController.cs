@@ -84,7 +84,6 @@ namespace Verademo.Controllers
         {
             if (IsUserLoggedIn() == false)
             {
-                // return RedirectToLogin(Request.QueryString.Value);
             }
 
             var searchBlabslist = new List<BlabSearchResultViewModel>();

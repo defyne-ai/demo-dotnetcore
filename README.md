@@ -12,7 +12,7 @@
 Usecases [Full info](https://docs.google.com/spreadsheets/d/1VHF0Djvu3PbJFywhcWrV0SX1lq6w_bZJCLMbbx5tAwM/edit#gid=1056135309):
 
 - [ ] Authentication
-	- [x] [No authentication at all - invalid](`..\..\app\Controllers\AccountController.cs#185`) [AllowAnonymousTag -> execution]
+	- [x] [No authentication at all - invalid](`..\..\app\Controllers\AccountController.cs#185`) [execution]
 	- [x] [No authentication at all - valid](`..\..\app\app\Controllers\AccountController.cs#277`) [AllowAnonymousTag -> execution]
 	- [x] [Valid Authentication](`..\..\app\Controllers\BlabController.cs#72`) [Auth -> validation -> execution]
 	- [x] [Authentication but no validation](`..\..\app\Controllers\BlabController.cs#83`) [Auth -> execution]
