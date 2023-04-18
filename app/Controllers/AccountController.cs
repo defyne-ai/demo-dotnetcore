@@ -186,6 +186,10 @@ namespace Verademo.Controllers
         {
             logger.Info("Entering PostProfile");
 
+            if (IsUserLoggedIn() == false)
+            {
+                return RedirectToLogin(Request.QueryString.Value);
+            }
 
             var oldUsername = GetLoggedInUsername();
             var imageDir = Path.Combine(_environment.WebRootPath, "images");
